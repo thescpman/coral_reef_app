@@ -1,17 +1,21 @@
 {% extends 'website/base.html' %}
-
-{% block content %}
+{% block page_header %}
   <h1>Why Coral Reefs are important?</h1>
+{% endblock page_header %}
+{% block content %}
+  <div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="container-fluid py-4">
+       <p class="lead">Coral reefs may make up only 0.01% of the ocean but also have 25% of all
+        marine life in the ocean! This means if coral reefs are destroyed a lot of
+        marine life will also perish!
+       </p>
+       <p class="lead">Well, why is this happening?</p>
 
-  <p>Coral reefs may make up only 0.01% of the ocean but also have 25% of all
-    marine life in the ocean! This means if coral reefs are destroyed a lot of
-    marine life will also perish!</p>
-
-  <h3>Why is this happening?</h3>
-
-  <p>Well, coral reefs mainly die from something called Coral Bleaching. This is
-    when the coral are exposed to hot temperatures or in hot waters, causing
-    the coral to become a white coral (Coral Bleaching)
-  </p>
+       <p class="lead">Well, coral reefs mainly die from something called Coral Bleaching. This is
+        when the coral are exposed to hot temperatures or in hot waters, causing
+        the coral to become a white coral (Coral Bleaching)
+      </p>
+   </div>
+</div>
   <hr/>
 {% endblock content %}
