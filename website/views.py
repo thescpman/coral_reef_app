@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Review
+from .forms import ReviewForm
 # Create your views here.
 
 def index(request):
@@ -18,3 +19,18 @@ def reviews(request):
     reviews = Review.objects.all()
     context = {'reviews':reviews}
     return render(request, 'website/reviews.html', context)
+
+def new_review(request):
+
+    if request.method != 'POST':
+        #No data submitted; create a blank form
+        form = ReviewForm()
+    else:
+        #Post data submitted; process data
+        form = ReviewForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('website:reviews')
+        
+    context = {'form':form}
+    return render(request, 'website/new_review.html', context)

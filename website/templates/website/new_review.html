@@ -1,0 +1,11 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+  <p>Add a new review</p>
+
+  <form action="{% url 'website:new_review' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <button name="submit">Add Review</button>
+  </form>
+{% endblock content %}
