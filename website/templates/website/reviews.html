@@ -1,0 +1,13 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+  <h1>Reviews</h1>
+
+  <ul>
+    {% for review in reviews %}
+      <li>{{review.name}}</li>
+    {% empty %}
+      <li>There are no reviews yet</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

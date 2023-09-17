@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Review
 # Create your views here.
 
 def index(request):
@@ -12,3 +12,9 @@ def coral_reef(request):
 
 def help_the_ocean(request):
     return render(request, 'website/help_the_ocean.html')
+
+def reviews(request):
+
+    reviews = Review.objects.all()
+    context = {'reviews':reviews}
+    return render(request, 'website/reviews.html', context)
