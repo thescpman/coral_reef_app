@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'notpro_website.wsgi.application'
+WSGI_APPLICATION = 'coral_reef_app.wsgi.application'
 
 
 # Database
