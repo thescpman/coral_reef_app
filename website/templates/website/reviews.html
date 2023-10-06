@@ -5,6 +5,7 @@
 
   <ul>
     {% for review in reviews %}
+      <li><h4>{{review.date_added|date:'M d, Y H:i' }}</h4></li>
       <li>{{review.name}}</li>
     {% empty %}
       <li>There are no reviews yet</li>
